@@ -7,11 +7,11 @@ while True:
     print("2.Modificar un producto existente")
     print("3.Eliminar un producto existente")
     print("4.Ver todos los productos")
-    print("4. salir del programa")
+    print("5. salir del programa")
 
     opcions= input("Eliga una opción 1-5: ")
 
-    match opciones:
+    match opcions:
         case "1":
             nuevo= input("Digite el nueveo elemento: ")
             products.append(nuevo)
@@ -25,6 +25,21 @@ while True:
             print("Elemento modificado con exito")
 
         case "3":
+            print(f"Mostrando lista actual: {products}")
+            value= input("ingrese el elemento a eliminar del listado: ")
+            products.remove(value)
+            print("Elemento eliminado con exito")
+
+        case "4":
+            print(f"mostrando todo el listado: {products}")
+
+        case "5":
+            print("_____Saliendo del menú______")
+            break
+
+        case _:
+            print("opcion no valida :) ")
+
 
 
 
